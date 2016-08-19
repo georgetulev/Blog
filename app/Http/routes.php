@@ -12,9 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    if(Auth::guest()){
+        return view('welcome');
+    } else {
+        return redirect('/blog');
+    }
 });
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+//Route::get('/', function () {
+//    return redirect('/blog');
+//});
+
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@show');
