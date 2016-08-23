@@ -20,13 +20,22 @@ Route::get('/', function () {
     }
 });
 
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@show');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-//Route::get('/', function () {
-//    return redirect('/blog');
-//});
+// Admin
+Route::get('admin', function(){
+    return redirect('admin/post');
+});
 
-Route::get('blog', 'BlogController@index');
-Route::get('blog/{slug}', 'BlogController@show');
+Route::group(['namespace' => 'Admin', 'middleware'=> 'auth',], function() {
+    Route::resource('admin/post', 'PostController');
+    Route::resource('admin/tag', 'TagController');
+    Route::get('admin/upload', 'UploadController@index');
+});
+
+
