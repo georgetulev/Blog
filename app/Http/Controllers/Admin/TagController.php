@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Tag;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -9,6 +10,16 @@ use App\Http\Controllers\Controller;
 
 class TagController extends Controller
 {
+    protected $fields = [
+        'tag' => '',
+        'title' => '',
+        'subtitle' => '',
+        'meta_description' => '',
+        'page_image' => '',
+        'layout' => 'blog.layouts.index',
+        'reverse_direction' => 0,
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +27,8 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        $tags = Tag::all();
+        return view('admin.tag.index',compact('tags'));
     }
 
     /**
@@ -26,7 +38,12 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        $data = [];
+        foreach($this->fields as $field => $default){
+            $data[$field] = old($field, $default);
+        }
+
+        return view('admin.tag.create', $data);
     }
 
     /**
