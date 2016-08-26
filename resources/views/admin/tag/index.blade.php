@@ -21,16 +21,16 @@
 
                 <table id="tags-table" class="table table-striped table-bordered">
                     <thead>
-                    <tr>
-                        <th>Tag</th>
-                        <th>Title</th>
-                        <th class="hidden-sm">Subtitle</th>
-                        <th class="hidden-md">Page Image</th>
-                        <th class="hidden-md">Meta Description</th>
-                        <th class="hidden-md">Layout</th>
-                        <th class="hidden-sm">Direction</th>
-                        <th data-sortable="false">Actions</th>
-                    </tr>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Title</th>
+                            <th class="hidden-sm">Subtitle</th>
+                            <th class="hidden-md">Page Image</th>
+                            <th class="hidden-md">Meta Description</th>
+                            <th class="hidden-md">Layout</th>
+                            <th class="hidden-sm">Direction</th>
+                            <th data-sortable="false">Actions</th>
+                        </tr>
                     </thead>
                     <tbody>
                     @foreach ($tags as $tag)
@@ -65,9 +65,8 @@
 
 @section('scripts')
     <script>
-        $(function() {
-            $("#tags-table").DataTable({
-            });
-        });
+        $(document).ready( function () {
+            $('#tags-table').DataTable();
+        } );
     </script>
 @stop
