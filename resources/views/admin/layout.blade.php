@@ -43,7 +43,7 @@
 
     @yield('content')
 
-    <script src="/assets/js/admin.js"></script>
+    <script src="/public/assets/js/admin.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
     @yield('scripts')
 </body>
