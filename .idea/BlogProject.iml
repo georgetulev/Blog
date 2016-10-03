@@ -3,7 +3,14 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/datatables" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/datatables-plugins" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/font-awesome" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/jquery" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/microplugin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/pickadate" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/selectize" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/sifter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dflydev/apache-mime-types" />
@@ -87,7 +94,14 @@
       <library name="PHP">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bower_dl/bootstrap" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables-plugins" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/font-awesome" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/jquery" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/microplugin" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/pickadate" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/selectize" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/sifter" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dflydev/apache-mime-types" />
@@ -157,7 +171,14 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bower_dl/bootstrap" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables-plugins" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/font-awesome" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/jquery" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/microplugin" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/pickadate" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/selectize" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/sifter" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dflydev/apache-mime-types" />

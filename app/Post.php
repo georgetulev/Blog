@@ -8,6 +8,11 @@ class Post extends Model
 {
     protected $dates = ['published_at'];
 
+    protected $fillable = [
+        'title', 'subtitle', 'content_raw', 'page_image', 'meta_description',
+        'layout', 'is_draft', 'published_at',
+    ];
+
     /**
      * The many-to-many relationship between posts and tags.
      *
@@ -16,6 +21,30 @@ class Post extends Model
     public function tags()
     {
         return $this->belongsToMany('App\Tag', 'post_tag_pivot');
+    }
+
+    /**
+     * Return the date portion of published_at
+     */
+    public function getPublishDateAttribute($value)
+    {
+        return $this->published_at->format('M-j-Y');
+    }
+
+    /**
+     * Return the time portion of published_at
+     */
+    public function getPublishTimeAttribute($value)
+    {
+        return $this->published_at->format('g:i A');
+    }
+
+    /**
+     * Alias for content_raw
+     */
+    public function getContentAttribute($value)
+    {
+        return $this->content_raw;
     }
 
     public function setTitleAttributes($value)

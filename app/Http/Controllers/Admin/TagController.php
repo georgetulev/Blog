@@ -75,8 +75,10 @@ class TagController extends Controller
     {
         $tag = Tag::findOrFail($id);
         $data = ['id' => $id];
-        foreach(array_keys($this->fields) as $field){
-            $data[$field] = old($field, $tag->field);
+
+        foreach(array_keys($this->fields) as $field)
+        {
+            $data[$field] = old($field, $tag->$field);
         }
 
         return view('admin.tag.edit', $data);
@@ -98,7 +100,7 @@ class TagController extends Controller
         }
         $tag->save();
 
-        return redirect("/admin/tag/$id/edit")
+        return redirect("/admin/tag")
             ->withSuccess("Changes saved!");
     }
 
