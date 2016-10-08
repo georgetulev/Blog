@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/clean-blog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/datatables" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/datatables-plugins" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower_dl/font-awesome" />
@@ -94,6 +95,7 @@
       <library name="PHP">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bower_dl/bootstrap" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/clean-blog" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables-plugins" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/font-awesome" />
@@ -171,6 +173,7 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bower_dl/bootstrap" />
+          <root url="file://$MODULE_DIR$/vendor/bower_dl/clean-blog" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/datatables-plugins" />
           <root url="file://$MODULE_DIR$/vendor/bower_dl/font-awesome" />

@@ -2,26 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\BlogIndexData;
 use App\Post;
+use App\Tag;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::where('published_at', '<=', Carbon::now())
-            ->orderBy('published_at', 'desc')
-            ->paginate(config('blog.posts_per_page'));
-
-        return view('blog.index', compact('posts'));
+        $tag = $request->get('tag');
+        $data = (new BlogIndexData($tag))->handle();
+        $layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
+//dd($data);
+        return view( $layout , $data);
     }
 
     /**
@@ -48,14 +50,33 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param $slug
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function show($slug)
     {
         $post = Post::whereSlug($slug)->firstOrFail();
 
         return view('blog.post')->withPost($post);
+    }
+
+    /**
+     *
+     *
+     * @param $slug
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showPost($slug, Request $request)
+    {
+        $post = Post::with('tags')->whereSlug($slug)->firstOrFail();
+        $tag = $request->get('tag');
+        if($tag) {
+            $tag = Tag::whereTag($tag)->firstOrFail();
+        }
+
+        return view($post->layout, compact('post', 'tag'));
     }
 
     /**

@@ -129,6 +129,5 @@
                   rows="6">{{ $meta_description }}</textarea>
             </div>
         </div>
-
     </div>
 </div>

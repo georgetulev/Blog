@@ -36,15 +36,14 @@ class PostController extends Controller
         return view('admin.post.create', $data);
     }
 
+
     /**
-     * Store a newly created Post.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param PostCreateRequest $request
+     * @return mixed
      */
     public function store(PostCreateRequest $request)
     {
-        $post = Post::create($request->postFillDate());
+        $post = Post::create($request->postFillData());
         $post->syncTags($request->get('tags', []));
 
         return redirect()
