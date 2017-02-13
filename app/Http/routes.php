@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Route::get('logout', 'AuthController@getLogout');
 Route::get('blog', 'BlogController@index');
-Route::get('blog/{slug}', 'BlogController@show');
+Route::get('blog/{slug}', 'BlogController@showPost');
 
 Route::auth();
 

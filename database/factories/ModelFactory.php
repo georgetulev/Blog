@@ -11,7 +11,9 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+use App\Post;
+
+$factory->define(App\User::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
@@ -26,6 +28,7 @@ $factory->define(App\Post::class, function ($faker) {
     return [
         'title' => $title,
         'subtitle' => str_limit($faker->sentence(mt_rand(10, 20)), 252),
+        'slug' => str_slug($title),
         'page_image' => $images[mt_rand(0, 3)],
         'content_raw' => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),

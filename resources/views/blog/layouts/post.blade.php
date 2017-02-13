@@ -39,7 +39,7 @@
         </div>
     </article>
 
-    {{-- The Pager --}}
+     {{--The Pager--}}
     <div class="container">
         <div class="row">
             <ul class="pager">
@@ -80,6 +80,5 @@
                 @endif
             </ul>
         </div>
-
     </div>
 @stop

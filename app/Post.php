@@ -5,6 +5,7 @@ namespace App;
 use Carbon\Carbon;
 use App\Services\Markdowner;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Post extends Model
 {
@@ -109,6 +110,12 @@ class Post extends Model
         $this->tags()->detach();
     }
 
+    /**
+     * Return url of the post
+     *
+     * @param Tag|null $tag
+     * @return \Illuminate\Contracts\Routing\UrlGenerator|string
+     */
     public function url(Tag $tag = null)
     {
         $url = url('blog/'.$this->slug);

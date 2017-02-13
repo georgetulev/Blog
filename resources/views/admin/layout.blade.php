@@ -9,6 +9,8 @@
 
     <link href="/assets/css/admin.css" rel="stylesheet">
 
+    @yield('styles')
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
@@ -42,8 +44,7 @@
     </nav>
 
     @yield('content')
-
-    <script src="/public/assets/js/admin.js"></script>
+    <script src="/assets/js/admin.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
     @yield('scripts')
 </body>

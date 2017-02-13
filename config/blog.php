@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'name' => "The Name to be changed",
+    'name' => "Blog Project",
     'title' => 'MyBlog',
-    'subtitle' => 'A clean blog alabala-alabala....',
+    'subtitle' => 'MyBlog\'s Subtitle',
     'description' => 'This is my meta description',
-    'author' => 'George :) Tulev',
+    'author' => 'Nevermind  :)',
     'page_image' => 'home-bg.jpg',
     'posts_per_page' => 5,
     'uploads' => [

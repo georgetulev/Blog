@@ -32,17 +32,18 @@ class PostFormFields extends Job
     /**
      * Create a new job instance.
      *
-     * @return void
+     * @param null $id
      */
     public function __construct($id = null)
     {
         $this->id = $id;
     }
 
+
     /**
-     * Execute the job.
+     * Executes the job.
      *
-     * @return void
+     * @return array
      */
     public function handle()
     {
@@ -64,6 +65,7 @@ class PostFormFields extends Job
             $fields,
             ['allTags' => Tag::lists('tag')->all()]
         );
+
     }
 
     /**

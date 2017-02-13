@@ -1,11 +1,11 @@
 @extends('admin.layout')
 
 @section('styles')
-    <link href="/assets/pickadate/themes/default.css" rel="stylesheet">
-    <link href="/assets/pickadate/themes/default.date.css" rel="stylesheet">
-    <link href="/assets/pickadate/themes/default.time.css" rel="stylesheet">
-    <link href="/assets/selectize/css/selectize.css" rel="stylesheet">
-    <link href="/assets/selectize/css/selectize.bootstrap3.css" rel="stylesheet">
+    <link href="/assets/pickadate/themes/default.css" rel="stylesheet" type="text/css">
+    <link href="/assets/pickadate/themes/default.date.css" rel="stylesheet" type="text/css">
+    <link href="/assets/pickadate/themes/default.time.css" rel="stylesheet" type="text/css">
+    <link href="/assets/selectize/css/selectize.css" rel="stylesheet" type="text/css">
+    <link href="/assets/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
 @stop
 
 @section('content')
@@ -42,15 +42,12 @@
                                     </div>
                                 </div>
                             </div>
-
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @stop
 
 @include('admin.post._js')

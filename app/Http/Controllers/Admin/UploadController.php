@@ -99,6 +99,8 @@ class UploadController extends Controller
 
     /**
      * Upload new file
+     * @param UploadFileRequest $request
+     * @return $this
      */
     public function uploadFile(UploadFileRequest $request)
     {

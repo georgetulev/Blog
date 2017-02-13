@@ -19,7 +19,7 @@ class BlogIndexData extends Job implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @return void
+     * @param $tag
      */
     public function __construct($tag)
     {

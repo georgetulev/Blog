@@ -22,7 +22,7 @@ class BlogController extends Controller
         $tag = $request->get('tag');
         $data = (new BlogIndexData($tag))->handle();
         $layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
-//dd($data);
+
         return view( $layout , $data);
     }
 
@@ -58,7 +58,7 @@ class BlogController extends Controller
     {
         $post = Post::whereSlug($slug)->firstOrFail();
 
-        return view('blog.post')->withPost($post);
+        return view('blog.layouts.post')->withPost($post);
     }
 
     /**
@@ -70,12 +70,13 @@ class BlogController extends Controller
      */
     public function showPost($slug, Request $request)
     {
+
         $post = Post::with('tags')->whereSlug($slug)->firstOrFail();
         $tag = $request->get('tag');
         if($tag) {
             $tag = Tag::whereTag($tag)->firstOrFail();
         }
-
+        //dd($post->layout);
         return view($post->layout, compact('post', 'tag'));
     }
 

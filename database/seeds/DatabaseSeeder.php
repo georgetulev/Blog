@@ -12,23 +12,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->truncate();
+
+        $users = array(
+            ['id' => 1, 'name' => 'Name', 'email' => 'joro@example.com', 'password' => bcrypt('password')],
+        );
+
+        DB::table('users')->insert($users);
+
         Model::unguard();
+
         $this->call(TagTableSeeder::class);
         $this->call(PostTableSeeder::class);
-        // $this->call(UsersTableSeeder::class);
 
         Model::reguard();
     }
 }
 
-//class PostTableSeeder extends Seeder
-//{
-//    public function run()
-//    {
-//        App\Post::truncate();
-//
-//        factory(App\Post::class, 20)->create();
-//    }
-//}
 
 
