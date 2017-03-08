@@ -10,15 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function () {
+Route::get('/', 'BlogController@index');
+Route::get('/auth/logout','Auth\AuthController@logout');
+Route::get('/auth/login','Auth\AuthController@login');
 
-    if(Auth::guest()){
-        return view('auth.login');
-    } else {
-        return redirect('/blog');
-    }
-});
-Route::get('logout', 'AuthController@getLogout');
 Route::get('blog', 'BlogController@index');
 Route::get('blog/{slug}', 'BlogController@showPost');
 

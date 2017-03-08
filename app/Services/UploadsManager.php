@@ -16,6 +16,12 @@ class UploadsManager
         $this->mimeDetect = $mimeDetect;
     }
 
+    /**
+     *  Return files and directories within a folder
+     *
+     * @param string $folder
+     * @return array
+     */
     public function folderInfo($folder)
     {
         $folder = $this->cleanFolder($folder);

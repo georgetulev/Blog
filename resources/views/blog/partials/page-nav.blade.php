@@ -19,6 +19,7 @@
                 <li>
                     <a href="/">Home</a>
                 </li>
+                <li><a href="{{ url('/login') }}">Login</a></li>
             </ul>
         </div>
     </div>

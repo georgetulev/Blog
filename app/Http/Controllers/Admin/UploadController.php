@@ -16,6 +16,9 @@ class UploadController extends Controller
 {
     protected $manager;
 
+    /**
+     * @param UploadsManager $manager
+     */
     public function __construct(UploadsManager $manager)
     {
         $this->manager = $manager;
@@ -55,6 +58,8 @@ class UploadController extends Controller
 
     /**
      * Delete a file
+     * @param Request $request
+     * @return $this
      */
     public function deleteFile(Request $request)
     {

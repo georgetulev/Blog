@@ -7,7 +7,7 @@
         <div class="row page-title-row">
             <div class="col-md-6">
                 <h3 class="pull-left">Uploads </h3>
-                <div class="pull-left">
+                <div class="pull-left col-lg-offset-1">
                     <ul class="breadcrumb">
                         @foreach ($breadcrumbs as $path => $disp)
                             <li><a href="/admin/upload?folder={{ $path }}">{{ $disp }}</a></li>
@@ -20,6 +20,10 @@
                 <button type="button" class="btn btn-success btn-md"
                         data-toggle="modal" data-target="#modal-folder-create">
                     <i class="fa fa-plus-circle"></i> New Folder
+                </button>
+                <button type="button" class="btn btn-primary btn-md"
+                        data-toggle="modal" data-target="#modal-file-upload">
+                    <i class="fa fa-upload"></i> Upload
                 </button>
             </div>
         </div>
